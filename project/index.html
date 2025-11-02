@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SYNAPSE 2K25 - National Level Technical Symposium</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&family=Exo+2:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>SYNAPSE 2K25</h2>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#events" class="nav-link">Events</a>
+                <a href="#coordinators" class="nav-link">Coordinators</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Banner Section -->
+   <section id="home" class="banner">
+    <!-- Video Background -->
+    <video autoplay muted loop playsinline class="banner-video">
+        <source src="images/video.mp4" type="video/mp4">
+        <source src="images/banner-video.webm" type="video/webm">
+        <!-- Fallback image if video doesn't load -->
+        <img src="images/fallback-banner.jpg" alt="BIHER SYSAPSE 2K25 Background">
+    </video>
+    
+    <div class="banner-overlay"></div>
+    <div class="banner-content">
+        <h1 class="banner-title">BIHER</h1>
+        <h1 class="banner-title">SYNAPSE 2K25</h1>
+        <p class="banner-subtitle">School Of Electrical Engineering</p>
+        <p class="banner-subtitle">National Level Technical Symposium – Dept. of ECE & EEE</p>
+        <div class="countdown-container">
+            <div class="countdown-title">Event Starts In</div>
+            <div class="countdown">
+                <div class="countdown-item">
+                    <span class="countdown-number" id="days">00</span>
+                    <span class="countdown-label">Days</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="hours">00</span>
+                    <span class="countdown-label">Hours</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="minutes">00</span>
+                    <span class="countdown-label">Minutes</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="seconds">00</span>
+                    <span class="countdown-label">Seconds</span>
+                </div>
+            </div>
+        </div>
+        <button class="cta-button" onclick="scrollToSection('events')">Register Now</button>
+    </div>
+</section>
+
+    <!-- Events Section -->
+    <section id="events" class="events">
+        <div class="container">
+            <h2 class="section-title">Events</h2>
+            <div class="events-tabs">
+                <button class="tab-button active" data-tab="technical">Technical Events</button>
+                <button class="tab-button" data-tab="non-technical">Non-Technical Events</button>
+            </div>
+
+            <div class="events-grid" id="technical-events">
+                <!-- Technical Events will be populated by JavaScript -->
+            </div>
+
+            <div class="events-grid hidden" id="non-technical-events">
+                <!-- Non-Technical Events will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Event Modal -->
+    <div id="event-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+                <!-- Modal content will be populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Coordinators Section -->
+    <section id="coordinators" class="coordinators">
+        <div class="container">
+            <h2 class="section-title">Coordinators</h2>
+
+            <div class="coordinators-category">
+                <h3 class="category-title">Faculty Coordinators</h3>
+                <div class="coordinators-grid">
+                    <div class="coordinator-profile fade-in">
+                        <div class="coordinator-img">
+                            <img src="images/coordinators/dean.png" alt="Dr.S.Prakash"
+                                onerror="handleImageError(this)">
+                        </div>
+                        <div class="coordinator-details">
+                            <h3>Dr.S.Prakash</h3>
+                            <p class="role">DEAN  SEE</p>
+                            <p class="contact">prakash.eee@bharathuniv.ac.in</p>
+                             <p class="department"> Professor, EEE</p>
+                        </div>
+                    </div>
+                    <div class="coordinator-profile fade-in">
+                        <div class="coordinator-img">
+                            <img src="images/coordinators/hod.jpeg" alt="Dr. B. Kalaiselvi"
+                                onerror="handleImageError(this)">
+                        </div>
+                        <div class="coordinator-details">
+                            <h3>Dr.B. Kalaiselvi</h3>
+                            <p class="role">HOD OF ECE</p>
+                            <p class="contact">hodece@bharathuniv.ac.in</p>
+                            <p class="department">Associate Professor, ECE</p>
+                        </div>
+                    </div>
+                    <div class="coordinator-profile fade-in">
+                        <div class="coordinator-img">
+                            <img src="images/coordinators/eeehod.png" alt="Dr.S.Lakshmi"
+                                onerror="handleImageError(this)">
+                        </div>
+                        <div class="coordinator-details">
+                            <h3>Dr.S.Lakshmi</h3>
+                            <p class="role">HOD OF EEE</p>
+                            <p class="contact">hod.eee@bharathuniv.ac.in</p>
+                            <p class="department">Associate Professor, ECE</p>
+                        </div>
+                    </div>
+                    <div class="coordinator-profile fade-in">
+                        <div class="coordinator-img">
+                            <img src="images/coordinators/dhinakar.jpeg" alt="Dr. B. Kalaiselvi"
+                                onerror="handleImageError(this)">
+                        </div>
+                        <div class="coordinator-details">
+                            <h3>Dr.P.Dhinakar</h3>
+                            <p class="role">Assistant Hod Of ECE</p>
+                            <p class="contact">dhinakar.ece@bharathuniv.ac.in.</p>
+                            <p class="department"> Professor, ECE</p>
+                        </div>
+                    </div>
+                    <div class="coordinator-profile fade-in">
+                        <div class="coordinator-img">
+                            <img src="images/coordinators/arulselvi.jpeg" alt="Dr. S. Arulselvi"
+                                onerror="handleImageError(this)">
+                        </div>
+                        <div class="coordinator-details">
+                            <h3>Dr. S. Arulselvi</h3>
+                            <p class="role">Faculty Coordinator</p>
+                            <p class="contact">arulselvi.ece@bharathuniv.ac.in</p>
+                            <p class="department">Assosiate Professor, ECE</p>
+                        </div>
+                    </div>
+                     <div class="coordinator-profile fade-in">
+                        <div class="coordinator-img">
+                            <img src="images/coordinators/rekha.png" alt="Dr. K. Rajesh"
+                                onerror="handleImageError(this)">
+                        </div>
+                        <div class="coordinator-details">
+                            <h3>Ms.R.Rekha Sharmily</h3>
+                            <p class="role">Faculty Coordinator</p>
+                            <p class="contact">rekhasharmily.ece@bharathuniv.ac.in</p>
+                            <p class="department">Assistant Professor, ECE</p>
+                        </div>
+                    </div>
+                    <div class="coordinator-profile fade-in">
+                        <div class="coordinator-img">
+                            <img src="images/coordinators/anitha.jpeg" alt="Dr. M. Vishnu"
+                                onerror="handleImageError(this)">
+                        </div>
+                        <div class="coordinator-details">
+                            <h3>Mrs. Anitha Sampathkumar</h3>
+                            <p class="role">Faculty Coordinator</p>
+                            <p class="contact">anithas.eee@bharathuniv.ac.in</p>
+                            <p class="department">Assistant Professor - EEE</p>
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+    <!-- Student Coordinators Section -->
+    <div class="coordinators-category">
+        <h3 class="category-title">Student Coordinators</h3>
+        <div class="coordinators-grid">
+            <!-- Student Head Coordinator -->
+            <div class="coordinator-profile fade-in">
+                <div class="coordinator-img">
+                    <img src="images/coordinators/ashiq.jpg" alt="Shaik Abdul Ashiq" onerror="handleImageError(this)">
+                </div>
+                <div class="coordinator-details">
+                    <h3>Shaik Abdul Ashiq</h3>
+                    <p class="role">President of Comm Tech Innovators Club</p>
+                    <p class="role">Student Coordinator</p>
+                    <p class="contact">+91 81212 30218</p>
+                    <p class="department">IV Year ECE</p>
+                </div>
+            </div>
+
+            <!-- Student Coordinators -->
+            <div class="coordinator-profile fade-in">
+                <div class="coordinator-img">
+                    <img src="images/coordinators/kishore.jpeg" alt="Priya Sharma" onerror="handleImageError(this)">
+                </div>
+                <div class="coordinator-details">
+                    <h3>Kishore.P</h3>
+                    <p class="role"> Vice President of Comm Tech Innovators Club</p>
+                    <p class="role">Student Coordinator</p>
+                    <p class="contact">+91 80982 10731</p>
+                    <p class="department">IV Year ECE</p>
+                </div>
+            </div>
+
+            <div class="coordinator-profile fade-in">
+                <div class="coordinator-img">
+                    <img src="images/coordinators/parasuram.jpeg" alt="Rahul Verma" onerror="handleImageError(this)">
+                </div>
+                <div class="coordinator-details">
+                    <h3>D.Parasuram</h3>
+                    <p class="role"> Treasurer of Comm Tech Innovators Club</p>
+                    <p class="role">Student Coordinator</p>
+                    <p class="contact">+91 91103 24036</p>
+                    <p class="department">IV Year ECE</p>
+                </div>
+            </div>
+
+            <div class="coordinator-profile fade-in">
+                <div class="coordinator-img">
+                    <img src="images/coordinators/susindran.jpeg" alt="Anjali Patel" onerror="handleImageError(this)">
+                </div>
+                <div class="coordinator-details">
+                    <h3>K.Susindran</h3>
+                    <p class="role">Student Coordinator</p>
+                    <p class="contact">+91 99400 18170</p>
+                    <p class="department">IV Year EEE</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <p class="contact-text">Have questions about SYSAPSE 2K25? Get in touch with us!</p>
+                    <a href="https://chat.whatsapp.com/ETqMS8BYHB2ByxVsQ0DcE4" target="_blank" class="contact-button">Contact on WhatsApp</a>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="mailto:sysapse2k25@bharathuniv.ac.in" class="social-link"><i
+                                class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="map-container">
+                    <div class="map-placeholder">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Bharath Institute of Higher Education and Research</h3>
+                        <p>173, Agaram Road, Selaiyur</p>
+                        <p>Chennai, Tamil Nadu - 600073</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 SYSAPSE 2K25 - Department of ECE, Bharath Institute of Higher Education and Research
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
